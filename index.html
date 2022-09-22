@@ -4,27 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Expense assist help document</title>
+
     <style>
+        * {
+            font-family: 'Josefin Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        .container {
+            padding: 10px 30px !important;
+        }
+
         img {
+            width: 80%;
+            margin: 0 auto;
             margin-top: 10px;
             margin-bottom: 10px;
-            width: 100%;
             height: auto;
+        }
+
+        .img_wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .article {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 15px;
+        }
+
+        p {
+            margin-left: 20px !important;
         }
     </style>
 </head>
 
 <body>
-    <h1>Expense Assist</h1>
-    <h2>Help articles</h2>
-    <h3>Adding Expense</h3>
-    <p>Click on the add button on the home page</p>
-    <img src="https://res.cloudinary.com/dtcsnldds/image/upload/v1663835438/Screenshot_20220922-135759_pg5k79.jpg" />
-    <h3>Transaction SMS Expense</h3>
-    <p>Click on the SMS button on the home page quick menu</p>
-    <img src="https://res.cloudinary.com/dtcsnldds/image/upload/v1663835435/Screenshot_20220922-135804_t5bwvj.jpg" />
+    <div class="container">
+        <h2>Help 👋</h2>
+        <div class="article">
+            <h4>👉 Adding Expense</h4>
+            <p>Click on the add button on the home page</p>
+            <div class="img_wrapper"> <img
+                    src="https://res.cloudinary.com/dtcsnldds/image/upload/v1663835438/Screenshot_20220922-135759_pg5k79.jpg" />
+            </div>
+        </div>
+        <div class="article">
+            <h4>👉 Transaction SMS Expense</h4>
+            <p>Click on the SMS button on the home page quick menu</p>
+            <div class="img_wrapper">
+                <img
+                    src="https://res.cloudinary.com/dtcsnldds/image/upload/v1663835435/Screenshot_20220922-135804_t5bwvj.jpg" />
+            </div>
+        </div>
+    </div>
 </body>
+<link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+<!-- 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+    integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+    crossorigin="anonymous"></script> -->
 
 </html>
