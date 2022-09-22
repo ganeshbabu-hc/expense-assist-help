@@ -33,17 +33,28 @@
         .article {
             margin-top: 20px;
             padding: 10px;
-            background-color: #f4f4f4;
+            background-color: rgb(255 255 255 / 23%);
             border-radius: 15px;
         }
 
         p {
             margin-left: 20px !important;
         }
+
+        .theme-dark {
+            background-color: #000;
+        }
+
+        .theme-dark p,
+        .theme-dark h4,
+        .theme-dark h2 {
+            color: #fff;
+        }
+        
     </style>
 </head>
 
-<body>
+<body id="app">
     <div class="container">
         <h2>Help 👋</h2>
         <div class="article">
@@ -64,6 +75,12 @@
     </div>
 </body>
 <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+<script>
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    document.getElementById("app").classList.add('theme-'+urlParams.get('themeMode'));
+    document.getElementById("app").style.backgroundColor = urlParams.get('bg');
+</script>
 <!-- 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
     integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
