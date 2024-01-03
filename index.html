@@ -1,97 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Expense assist help document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        * {
-            font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-        }
-
-        .container {
-            padding: 10px 20px !important;
-        }
-
-        img {
-            width: 80%;
-            margin: 0 auto;
-            margin-top: 10px;
-            margin-bottom: 10px;
-            height: auto;
-        }
-
-        .img_wrapper {
-            margin-left: 20px;
-        }
-
-        .article {
-            margin-top: 20px;
-            padding: 10px;
+        .collapsible {
             background-color: #15202b;
-            border-radius: 15px;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
         }
 
-        p {
-            margin-left: 20px !important;
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #fff;
         }
-
-        .theme-dark {
-            background-color: #15202b;
-        }
-
-        .theme-dark p,
-        .theme-dark h4,
-        .theme-dark h2 {
-            color: #fff;
-        }
-        
     </style>
 </head>
+<body>
 
-<body id="app">
-    <div class="container">
-        <h2>Help 👋</h2>
-        <div class="article">
-            <h4>👉 Adding Expense</h4>
-            <p>Click on the add button on the home page</p>
-            <div class="img_wrapper"> <img
-                    src="https://res.cloudinary.com/dtcsnldds/image/upload/v1663835438/Screenshot_20220922-135759_pg5k79.jpg" />
-            </div>
-        </div>
-        <div class="article">
-            <h4>👉 Transaction SMS Expense</h4>
-            <p>Click on the SMS button on the home page quick menu</p>
-            <div class="img_wrapper">
-                <img
-                    src="https://res.cloudinary.com/dtcsnldds/image/upload/v1663835435/Screenshot_20220922-135804_t5bwvj.jpg" />
-            </div>
-        </div>
+    <button class="collapsible">Adding Tracking Expenses and Incomes</button>
+    <div class="content">
+        <p>Instructions for adding and tracking expenses and incomes in your app.</p>
     </div>
+
+    <button class="collapsible">Reading Transactions from SMS</button>
+    <div class="content">
+        <p>Learn how to enable and use the SMS reading feature for automatic transaction tracking.</p>
+    </div>
+
+    <!-- Add more sections for other topics -->
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
+        }
+    </script>
+
 </body>
-<!-- <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'> -->
-<script>
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    document.getElementById("app").classList.add('theme-'+urlParams.get('themeMode'));
-    document.getElementById("app").style.backgroundColor = urlParams.get('bg');
-</script>
-<!-- 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-    integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
-    integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
-    integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-    crossorigin="anonymous"></script> -->
-
 </html>
