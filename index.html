@@ -21,6 +21,7 @@
 
         .header {
             color: white;
+            font-size: 26px;
         }
 
         .collapsible {
@@ -39,11 +40,13 @@
         }
 
         .collapsible.active .icon {
-            transform: rotateZ(-180deg);
+            transform: rotateZ(180deg);
         }
 
         .content {
-            padding: 0 18px;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            padding: 16px;
             font-size: 14px;
             background-color: #1E3140;
             display: none;
@@ -51,12 +54,21 @@
             color: #fff;
             border-radius: 16px;
         }
+        .content p,
+        .content h5 {
+            margin-top: 0;
+            font-size: 14px;
+        }
 
         .content li {
             margin-bottom: 8px;
         }
 
         .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.25s linear;
             width: 20px;
             height: 20px;
             margin-left: 10px;
@@ -64,7 +76,8 @@
         }
 
         img {
-            width: 80%;
+            width: 100%;
+            max-width: 600px;
             margin: 0 auto;
             margin-top: 24px;
             margin-bottom: 24px;
@@ -80,7 +93,7 @@
 
 <body>
     <div class="container">
-        <h3 class="header">SpendWise app help</h3>
+        <h3 class="header">SpendWise Help</h3>
         <button class="collapsible">
             <span>Adding and Tracking Expenses/Incomes </span>
 
@@ -93,9 +106,9 @@
 
         </button>
         <div class="content">
-            <p>
+            <h5>
                 To add and track expenses or incomes:
-            </p>
+            </h5>
             <ol>
                 <li>Open the app and navigate to the "Add Transaction" section.
                 </li>
@@ -116,9 +129,9 @@
             </span>
         </button>
         <div class="content">
-            <p>
+            <h5>
                 Enable the SMS reading feature to automatically track transactions from your messages:
-            </p>
+            </h5>
             <ol>
                 <li>Go to Settings and enable SMS reading.
                 </li>
@@ -140,9 +153,9 @@
             </span>
         </button>
         <div class="content">
-            <p>
+            <h5>
                 Manage your expenses effectively by setting up budgets:
-            </p>
+            </h5>
             <ol>
                 <li>Access the "Budgets" section in the app.
                 </li>
@@ -161,9 +174,9 @@
             </span>
         </button>
         <div class="content">
-            <p>
+            <>
                 Categorize your transactions for better organization:
-            </p>
+        </h5>
             <ol>
                 <li>Navigate to the "Categories" or "Tags" section.
                 </li>
@@ -182,9 +195,9 @@
             </span>
         </button>
         <div class="content">
-            <p>
+            <h5>
                 Track different payment methods:
-            </p>
+            </h5>
             <ol>
                 <li>Visit the "Payment Types" section.
                 </li>
