@@ -1,39 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
+        * {
+            font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            padding: 10px 20px !important;
+            background-color: #15202b;
+        }
+
+        .header {
+            color: white;
+        }
+
         .collapsible {
+            font-size: 18px;
             background-color: #15202b;
             cursor: pointer;
-            padding: 18px;
+            padding: 16px;
             width: 100%;
             border: none;
             text-align: left;
             outline: none;
-            font-size: 15px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .collapsible.active .icon {
+            transform: rotateZ(-180deg);
         }
 
         .content {
             padding: 0 18px;
+            font-size: 14px;
+            background-color: #1E3140;
             display: none;
             overflow: hidden;
-            background-color: #fff;
+            color: #fff;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        img {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 24px;
+            margin-bottom: 24px;
+            height: auto;
+        }
+
+        .img_wrapper {
+            margin-left: 20px;
         }
     </style>
 </head>
+
 <body>
+    <div class="container">
+        <h3 class="header">SpendWise app help</h3>
+        <button class="collapsible">
+            <span>Adding and Tracking Expenses/Incomes </span>
 
-    <button class="collapsible">Adding Tracking Expenses and Incomes</button>
-    <div class="content">
-        <p>Instructions for adding and tracking expenses and incomes in your app.</p>
-    </div>
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 20 12" fill="none">
+                    <path d="M2 2L10 10L18 2" stroke="white" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </span>
 
-    <button class="collapsible">Reading Transactions from SMS</button>
-    <div class="content">
-        <p>Learn how to enable and use the SMS reading feature for automatic transaction tracking.</p>
+        </button>
+        <div class="content">
+            <p>
+                To add and track expenses or incomes:
+            </p>
+            <ol>
+                <li>Open the app and navigate to the "Add Transaction" section.
+                </li>
+                <li>Enter the details such as amount, category, and date.
+                </li>
+                <li>Save the transaction.</li>
+            </ol>
+            <div class="img_wrapper"> <img
+                    src="https://res.cloudinary.com/dtcsnldds/image/upload/v1663835438/Screenshot_20220922-135759_pg5k79.jpg" />
+            </div>
+        </div>
+        <button class="collapsible">Reading Transactions from SMS
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 20 12" fill="none">
+                    <path d="M2 2L10 10L18 2" stroke="white" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </span>
+        </button>
+        <div class="content">
+            <p>
+                Enable the SMS reading feature to automatically track transactions from your messages:
+            </p>
+            <ol>
+                <li>Go to Settings and enable SMS reading.
+                </li>
+                <li>Grant necessary permissions for the app to read SMS.
+
+                </li>
+            </ol>
+            <div class="img_wrapper">
+                <img
+                    src="https://res.cloudinary.com/dtcsnldds/image/upload/v1663835435/Screenshot_20220922-135804_t5bwvj.jpg" />
+            </div>
+        </div>
+        <button class="collapsible">Expense Budgets
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 20 12" fill="none">
+                    <path d="M2 2L10 10L18 2" stroke="white" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </span>
+        </button>
+        <div class="content">
+            <p>
+                Manage your expenses effectively by setting up budgets:
+            </p>
+            <ol>
+                <li>Access the "Budgets" section in the app.
+                </li>
+                <li>Set monthly or category-specific budgets.
+                </li>
+                <li>Monitor your spending against the set budgets.
+                </li>
+            </ol>
+        </div>
+        <button class="collapsible">Managing Categories
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 20 12" fill="none">
+                    <path d="M2 2L10 10L18 2" stroke="white" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </span>
+        </button>
+        <div class="content">
+            <p>
+                Categorize your transactions for better organization:
+            </p>
+            <ol>
+                <li>Navigate to the "Categories" or "Tags" section.
+                </li>
+                <li>Add, edit, or delete categories as needed.
+                </li>
+                <li>Assign categories when adding or editing transactions.
+                </li>
+            </ol>
+        </div>
+        <button class="collapsible">Payment Methods
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 20 12" fill="none">
+                    <path d="M2 2L10 10L18 2" stroke="white" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </span>
+        </button>
+        <div class="content">
+            <p>
+                Track different payment methods:
+            </p>
+            <ol>
+                <li>Visit the "Payment Types" section.
+                </li>
+                <li>Add, edit, or delete payment types like cash, credit card, etc.
+                </li>
+                <li>Choose the payment type when adding transactions.
+                </li>
+            </ol>
+        </div>
     </div>
 
     <!-- Add more sections for other topics -->
@@ -43,7 +201,7 @@
         var i;
 
         for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
+            coll[i].addEventListener("click", function () {
                 this.classList.toggle("active");
                 var content = this.nextElementSibling;
                 if (content.style.display === "block") {
@@ -54,6 +212,6 @@
             });
         }
     </script>
-
 </body>
+
 </html>
