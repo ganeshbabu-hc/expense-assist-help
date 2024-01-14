@@ -2,13 +2,130 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        @font-face {
+            font-family: Brandon;
+            src: url("https://raw.githubusercontent.com/ganeshbabu-hc/expense-assist-help/main//Brandon_reg.otf") format("opentype");
+        }
+
+        @font-face {
+            font-family: Brandon;
+            font-weight: bold;
+            src: url("https://raw.githubusercontent.com/ganeshbabu-hc/expense-assist-help/main//Brandon_bld.otf") format("opentype");
+        }
+
+        * {
+            font-family: Brandon, 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            background-color: #15202b;
+        }
+
+        .header {
+            padding-top: 40px;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-top: 0;
+            color: white;
+            font-weight: bold;
+            font-size: 26px;
+        }
+
+        .collapsible {
+            font-weight: bold;
+            padding: 16px 30px;
+            padding-left: 35px;
+            font-size: 18px;
+            background-color: #15202b;
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .collapsible.active .icon {
+            transform: rotateZ(180deg);
+        }
+
+        .content {
+            font-weight: normal;
+            padding: 16px 30px;
+            padding-left: 30px;
+            margin-top: 16px;
+            margin-bottom: 16px;
+            font-size: 14px;
+            background-color: #1E3140;
+            display: none;
+            overflow: hidden;
+            color: #fff;
+        }
+
+        .content p,
+        .content h5 {
+            margin-top: 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.25s linear;
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        img {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            margin-top: 24px;
+            margin-bottom: 24px;
+            height: auto;
+            border-radius: 6px;
+        }
+
+        .img_wrapper {
+            margin-left: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    Hello text
+    <div class="container">
+        <h3 class="header">Contact Us</h3>
+        <img style="width: 100%;border-radius: 0;"
+            src="https://raw.githubusercontent.com/ganeshbabu-hc/expense-assist-help/main/employees-giving-hands-helping-colleagues-walk-upstairs_74855-5236.jpg" />
+        <button class="collapsible">
+            <span>Email US your query</span>
+            <span class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 20 12" fill="none">
+                    <path d="M2 2L10 10L18 2" stroke="white" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </span>
+        </button>
+    </div>
 </body>
 
 </html>
